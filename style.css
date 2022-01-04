@@ -1,0 +1,206 @@
+/***************************************
+                        SET UP
+***************************************/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+    --primary-background-color: #fff;
+    --secondary-background-color: rgb(32, 102, 252);
+    --primary-hover-color: #ccc;
+    --secondary-text-color: #333;
+}
+/***************************************
+                  NAVIGATION
+***************************************/
+#page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: var(--secondary-background-color);
+}
+#nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+#nav-list li a {
+    padding: 0.1em;
+    border-radius: 5px;
+    transition: background 150ms linear;
+}
+#nav-list li a:hover {
+    background: var(--primary-hover-color);
+}
+#icon-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#icon-list li {
+    list-style-type: none;
+}
+#icon-list li a img{
+    padding: 0.4em;
+    transform: scale(1.25);
+}
+#icon-list li a img:hover{
+    transform: scale(1.5);
+    transition: background 150ms linear;
+}
+/***************************************
+                    INFO SECTION
+***************************************/
+#info-container {
+    background: var(--primary-background-color);
+    display: flex;
+    justify-content: center;
+    padding: 2em 1em;
+    line-height: 1.7em;
+}
+#info-para {
+    text-align: center;
+    max-width: 45ch;
+    color: var(--secondary-text-color);
+}
+ /***************************************
+                    MY PROJECTS
+***************************************/
+.main-headers {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1em;
+}
+#my-projects-header {
+    background: var(--secondary-background-color);
+}
+#my-projects-primary-container {
+    background: var(--secondary-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.my-projects-secondary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 10em;
+} 
+.my-projects-secondary-container h3 {
+    padding: 0 0 0.5em 0;
+    text-align: center;
+}
+.my-projects-secondary-container img {
+    width: 10em;
+    margin: 0 0 0.75em 0;
+    border: 3px solid black;
+    border-radius: 1em;
+}
+.my-projects-secondary-container h4 {
+    text-align: center;
+}
+.my-projects-secondary-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.projects-view-options {
+    padding: 0.75em 0 2.5em 0;
+}
+.projects-view-options li {
+    padding: 0.1em;
+    margin: 0.5vw;
+    border-radius: 5px;
+    transition: background 150ms linear;
+    background: var(--primary-hover-color);
+}
+.projects-view-options li:hover {
+    background: var(--secondary-background-color);
+}
+/***************************************
+                    ABOUT ME
+***************************************/
+#about-me-container {
+    display: flex;
+    justify-content: center;
+}
+#about-me-para {
+    text-align: center;
+    padding: 0 1.5em 1.5em 1.5em;
+    line-height: 1.7em;
+    color: var(--secondary-text-color);
+    max-width: 55ch;
+}
+/***************************************
+                   CONTACT ME
+***************************************/
+#contact-me-header {
+    background: var(--secondary-background-color);
+}
+#contact-me-container {
+    display: flex;
+    justify-content: center;
+    background: var(--secondary-background-color);
+}
+#contact-me-para {
+    text-align: center;
+    padding: 0 1.5em 5em 1.5em;
+    line-height: 1.7em;
+    color: #111;
+    max-width: 60ch;
+}
+/***************************************
+                MEDIA QUERIES
+***************************************/
+@media (min-width: 600px) {
+/**********
+NAVIGATION
+**********/
+    #page-header {
+        padding: 1em 2em 1em 2em;  
+    }
+/**********
+MY PROJECTS
+**********/
+    .my-projects-secondary-container h3 {
+        font-size: 1.6rem;
+    }
+    .my-projects-secondary-container img {
+        width: 12em;  
+    }
+    .my-projects-secondary-container h4 {
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 925px) {
+/**********
+NAVIGATION
+**********/
+    #page-header {
+        padding: 1em 3em 1em 3em;   
+    }
+    #nav-list {
+        width: 25em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+/**********
+MY PROJECTS
+**********/
+    #my-projects-primary-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .my-projects-secondary-container img {
+        width: 15em;
+    }
+}
